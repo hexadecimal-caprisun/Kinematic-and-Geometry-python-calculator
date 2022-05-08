@@ -6,4 +6,4 @@ Anyway, now time for the stuff on how to actually run the program
 
 If you have python installed you can run it in a normal IDE or in cmd using the "python kinematic.py" command, replacing it with whatever you have the file named as, or just by leaving a shortcut somewhere.
 
-If you do not have python installed, either go to the python website and download it there, then set it up and run as stated above, or install it from the windows store, prefereably 3.10 but 3.9 should also work for. Once you have it installed you can run the file as stated above.
+If you do not have python installed, either go to the python website and download it there, then set it up and run as stated above, or install it from the windows store, prefereably 3.10 but 3.9 should also work for this program. Once you have it installed you can run the file as stated above.
