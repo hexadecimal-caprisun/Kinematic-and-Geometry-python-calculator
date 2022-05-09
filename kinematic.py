@@ -71,26 +71,26 @@ elif EquationType == "2":
         elif CircuitEquationType == "5":
             n = int(input("How many resitors are there?\n"))
             i = 0
-            Req = 0
+            REQ = 0
             while i < n:
                 Rtemp = int(input(f"What is the value of resistor {i + 1}?\n"))
                 i = i + 1
-                Req = Req + Rtemp
-            print(f"The Total Resistance of the circuit is {Req}Ω")
+                REQ = REQ + Rtemp
+            print(f"The Total Resistance of the circuit is {REQ}Ω")
         elif CircuitEquationType == "6":
             n = int(input("How many resitors are there?\n"))
             i = 0
-            Req = 0
+            REQ = 0
             while i < n:
                 Rtemp = int(input(f"What is the value of resistor {i + 1}?\n"))
                 i = i + 1
-                Req = Req + 1/Rtemp
-            Req = 1/Req
-            print(f"The Total Resistance of the circuit is {Req}Ω")
+                REQ = REQ + 1/Rtemp
+            REQ = 1/REQ
+            print(f"The Total Resistance of the circuit is {REQ}Ω")
 
 elif EquationType == "3":
     GeoShapes = input("Pick a Shape to solve for to solve for:\n 1. Rectangle\n 2. Triangle\n 3. Circle\n 4. Rectangular Solid\n 5. Cylinder\n 6. Sphere\n 7. Right Triangle\n")
-    pi = 3.1415926535898
+    PI = 3.1415926535898
     if GeoShapes == "1":
         RectangleEquations = input("Pick an equation to solve for to solve for:\n 1. Area\n")
         if RectangleEquations == "1":
@@ -109,11 +109,11 @@ elif EquationType == "3":
         CircleEquations = input("Pick an equation to solve for to solve for:\n 1. Area\n 2. Circumference\n")
         if CircleEquations == "1":
             r = int(input("What is the radius?\n"))
-            a = (pi)*(r*r)
+            a = (PI)*(r*r)
             print(f"The area is {a}u^2")
         elif CircleEquations == "2":
             r = int(input("What is the radius?\n"))
-            c = 2*pi*r
+            c = 2*PI*r
             print(f"The Circumference is {c}u")
     elif GeoShapes == "4":
         RSEquations = input("Pick an equation to solve for to solve for:\n 1. Volume\n")
@@ -128,22 +128,22 @@ elif EquationType == "3":
         if Cylinderquations == "1":
             h = int(input("What is the height?\n"))
             r = int(input("What is the radius?\n"))
-            v = pi*(r*r)*h
+            v = PI*(r*r)*h
             print(f"The Volume is {v}u^3")
         elif Cylinderquations == "2":
             h = int(input("What is the height?\n"))
             r = int(input("What is the radius?\n"))
-            s = 2*(pi*r*h) + 2*(pi*(r*r))
+            s = 2*(PI*r*h) + 2*(PI*(r*r))
             print(f"The Surface Area is {s}u^2")
     elif GeoShapes == "6":
         SphereEquations = input("Pick an equation to solve for to solve for:\n 1. Volume\n 2. Surface Area\n")
         if SphereEquations == "1":
             r = int(input("What is the radius?\n"))
-            v = (4/3)*pi*(r*r*r)
+            v = (4/3)*PI*(r*r*r)
             print(f"The Volume is {v}u^3")
         if SphereEquations == "2":
             r = int(input("What is the radius?\n"))
-            s = 4*pi*(r*r)
+            s = 4*PI*(r*r)
             print(f"The Surface Area is {s}u^2")
     elif GeoShapes == "7":
         RightTEquations = input("Pick an equation to solve for to solve for:\n 1. C^2\n sinθ, cosθ, tanθ is too much work so screw off\n")
