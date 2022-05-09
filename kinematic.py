@@ -4,34 +4,38 @@ print("----------------------Reference your equation sheet and use it as an inde
 EquationType = input("Pick an equation type to see more equations:\n 1. Mechanics\n 2. Geometry\n")
 
 if EquationType == "1":
-    MechanicsEquations = input("Pick an equation to solve for:\n 1. Vf = Vi + at\n 2. ΔX = ((Vf + Vi)/2)t\n 3. Vit + 1/2at^2\n 4. V^2 = Vi^2 + 2aΔX\n")
-    if MechanicsEquations == "1":
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        a = int(input("Ok, what is acceleration?\n"))
-        t = int(input("Ok, what is time?\n"))
-        Vf = Vi + (a*t)
-        print(f"Ok, the final velocity is {Vf}m/s")
-    elif MechanicsEquations == "2":
-        Vf = int(input("Ok, what is the final Velocity?\n"))
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        t = int(input("Ok, what is the time?\n"))
-        ΔX = ((Vf + Vi)/2)*t
-        print(f"Ok, the displacement is {ΔX}m")
-    elif MechanicsEquations == "3":
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        a = int(input("Ok, what is the acceleration?\n"))
-        t = int(input("Ok, what is the time?\n"))
-        temp = a/2
-        ΔX = Vi*t + temp*(t*t)
-        print(f"Ok, the displacement is {ΔX}m")
-    elif MechanicsEquations == "4":
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        a = int(input("Ok, what is the acceleration?\n"))
-        ΔX = int(input("Ok, what is the displacement?\n"))
-        Vf = math.sqrt((Vi*Vi + ((2*(a*ΔX)))))
-        print(f"Ok, the final velocity is {Vf}m/s")
-    elif MechanicsEquations != "1" or "2" or "3" or "4":
-        print("Pick the right number loser")
+    MechanicsEquationType = input("Pick a type of Mechanic Equation:\n 1. Kinematics\n 2. Test\n ")
+    if MechanicsEquationType == "1":
+        KinematicEquations = input("Pick an equation to solve for:\n 1. Vf = Vi + at\n 2. ΔX = ((Vf + Vi)/2)t\n 3. Vit + 1/2at^2\n 4. V^2 = Vi^2 + 2aΔX\n")
+        if KinematicEquations == "1":
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            a = int(input("Ok, what is acceleration?\n"))
+            t = int(input("Ok, what is time?\n"))
+            Vf = Vi + (a*t)
+            print(f"Ok, the final velocity is {Vf}m/s")
+        elif KinematicEquations == "2":
+            Vf = int(input("Ok, what is the final Velocity?\n"))
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            t = int(input("Ok, what is the time?\n"))
+            ΔX = ((Vf + Vi)/2)*t
+            print(f"Ok, the displacement is {ΔX}m")
+        elif KinematicEquations == "3":
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            a = int(input("Ok, what is the acceleration?\n"))
+            t = int(input("Ok, what is the time?\n"))
+            temp = a/2
+            ΔX = Vi*t + temp*(t*t)
+            print(f"Ok, the displacement is {ΔX}m")
+        elif KinematicEquations == "4":
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            a = int(input("Ok, what is the acceleration?\n"))
+            ΔX = int(input("Ok, what is the displacement?\n"))
+            Vf = math.sqrt((Vi*Vi + ((2*(a*ΔX)))))
+            print(f"Ok, the final velocity is {Vf}m/s")
+        elif KinematicEquations != "1" or "2" or "3" or "4":
+            print("Pick the right number loser")
+    elif MechanicsEquationType == "2":
+        print("test")
 elif EquationType == "2":
     GeoShapes = input("Pick a Shape to solve for to solve for:\n 1. Rectangle\n 2. Triangle\n 3. Circle\n 4. Rectangular Solid\n 5. Cylinder\n 6. Sphere\n 7. Right Triangle\n")
     pi = 3.1415926535898
