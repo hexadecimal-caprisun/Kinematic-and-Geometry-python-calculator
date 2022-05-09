@@ -2,7 +2,7 @@ Welcome to my kinda sorta CLI calculator for some kinematic equations and most o
 
 Anyway, now time for the stuff on how to actually run the program
 
--------------------------------------------------------How to run the File--------------------------------------------------------
+------------------------------------------------------How to run the File--------------------------------------------------------
 
 If you have python installed you can run it in a normal IDE or in cmd using the "python kinematic.py" command, replacing it with whatever you have the file named as, or just by leaving a shortcut somewhere.
 
