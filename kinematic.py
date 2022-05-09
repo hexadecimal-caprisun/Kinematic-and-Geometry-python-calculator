@@ -1,38 +1,94 @@
 import math
-from tabnanny import verbose
 print("----------------------Reference your equation sheet and use it as an index to find what you need----------------------")
-EquationType = input("Pick an equation type to see more equations:\n 1. Mechanics\n 2. Geometry\n")
-
+print("PLEASE PUT ALL VALUES IN THEIR RELEVANT UNITS, CONVERT UNITS BEFORE PLUGGING THEM IN")
+EquationType = input("Pick an equation type to see more equations:\n 1. Mechanics\n 2. Electricity\n 3. Geometry\n")
 if EquationType == "1":
-    MechanicsEquations = input("Pick an equation to solve for:\n 1. Vf = Vi + at\n 2. ΔX = ((Vf + Vi)/2)t\n 3. Vit + 1/2at^2\n 4. V^2 = Vi^2 + 2aΔX\n")
-    if MechanicsEquations == "1":
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        a = int(input("Ok, what is acceleration?\n"))
-        t = int(input("Ok, what is time?\n"))
-        Vf = Vi + (a*t)
-        print(f"Ok, the final velocity is {Vf}m/s")
-    elif MechanicsEquations == "2":
-        Vf = int(input("Ok, what is the final Velocity?\n"))
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        t = int(input("Ok, what is the time?\n"))
-        ΔX = ((Vf + Vi)/2)*t
-        print(f"Ok, the displacement is {ΔX}m")
-    elif MechanicsEquations == "3":
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        a = int(input("Ok, what is the acceleration?\n"))
-        t = int(input("Ok, what is the time?\n"))
-        temp = a/2
-        ΔX = Vi*t + temp*(t*t)
-        print(f"Ok, the displacement is {ΔX}m")
-    elif MechanicsEquations == "4":
-        Vi = int(input("Ok, what is the initial Velocity?\n"))
-        a = int(input("Ok, what is the acceleration?\n"))
-        ΔX = int(input("Ok, what is the displacement?\n"))
-        Vf = math.sqrt((Vi*Vi + ((2*(a*ΔX)))))
-        print(f"Ok, the final velocity is {Vf}m/s")
-    elif MechanicsEquations != "1" or "2" or "3" or "4":
-        print("Pick the right number loser")
+    MechanicsEquationType = input("Pick a type of Mechanic Equation:\n 1. Kinematics\n 2. Test\n ")
+    if MechanicsEquationType == "1":
+        KinematicEquations = input("Pick an equation to solve for:\n 1. Vf = Vi + at\n 2. ΔX = ((Vf + Vi)/2)t\n 3. Vit + 1/2at^2\n 4. V^2 = Vi^2 + 2aΔX\n")
+        if KinematicEquations == "1":
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            a = int(input("Ok, what is acceleration?\n"))
+            t = int(input("Ok, what is time?\n"))
+            Vf = Vi + (a*t)
+            print(f"Ok, the final velocity is {Vf}m/s")
+        elif KinematicEquations == "2":
+            Vf = int(input("Ok, what is the final Velocity?\n"))
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            t = int(input("Ok, what is the time?\n"))
+            ΔX = ((Vf + Vi)/2)*t
+            print(f"Ok, the displacement is {ΔX}m")
+        elif KinematicEquations == "3":
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            a = int(input("Ok, what is the acceleration?\n"))
+            t = int(input("Ok, what is the time?\n"))
+            temp = a/2
+            ΔX = Vi*t + temp*(t*t)
+            print(f"Ok, the displacement is {ΔX}m")
+        elif KinematicEquations == "4":
+            Vi = int(input("Ok, what is the initial Velocity?\n"))
+            a = int(input("Ok, what is the acceleration?\n"))
+            ΔX = int(input("Ok, what is the displacement?\n"))
+            Vf = math.sqrt((Vi*Vi + ((2*(a*ΔX)))))
+            print(f"Ok, the final velocity is {Vf}m/s")
+        elif KinematicEquations != "1" or "2" or "3" or "4":
+            print("Pick the right number loser")
+    elif MechanicsEquationType == "2":
+        print("test")
 elif EquationType == "2":
+    ElectricEquationType = input("Pick a type of Electric Equation:\n 1. Coulomb's Law\n 2. Circuits\n")
+    if ElectricEquationType == "1":
+        k = 89875517923
+        q1 = int(input("What is the value of charge 1?\n"))
+        q2 = int(input("What is the value of charge 2?\n"))
+        r = int(input("What is the distance between the two charges?\n"))
+        temp = (q1*q2)/(r*r)
+        Fe = k*temp
+        print(f"The electric Force is {Fe}N")
+    elif ElectricEquationType == "2":
+        CircuitEquationType = input("Pick a circuits Equation: 1. ΔV = IR\n 2. R = ρl/A\n 3. I = Δq/Δt\n 4. P = IΔV\n 5. Rseries = R1 + R2...\n 6. Rparallel = 1/R1 + 1/R2...\n")
+        if CircuitEquationType == "1":
+            i = int(input("What is the current in the circuit?\n"))
+            r = int(input("What is the resistance in the circuit?\n"))
+            ΔV = i*r
+            print(f"The voltage in the circuit is {ΔV}V")
+        elif CircuitEquationType == "2":
+            ρ = int(input("What is the resitivity of the Material?\n"))
+            l = int(input("What is the length of the Material?\n"))
+            a = int(input("What is the area of the material?\n?"))
+            r = (ρ*l)/a
+            print(f"The resitance of the material is {r}Ω")
+        elif CircuitEquationType == "3":
+            q = int(input("What is the charge?\n"))
+            t = int(input("How much time passes?\n"))
+            i = q/t
+            print(f"The current is {i}A")
+        elif CircuitEquationType == "4":
+            i = int(input("What is the Current in the circuit?\n"))
+            v = int(input("What is the Voltage in the circuit?\n"))
+            p = i*v
+            print(f"The power in the circuit is {p}W")
+        elif CircuitEquationType == "5":
+            n = int(input("How many resitors are there?\n"))
+            i = 0
+            Req = 0
+            while i < n:
+                Rtemp = int(input(f"What is the value of resistor {i + 1}?\n"))
+                i = i + 1
+                Req = Req + Rtemp
+            print(f"The Total Resistance of the circuit is {Req}Ω")
+        elif CircuitEquationType == "6":
+            n = int(input("How many resitors are there?\n"))
+            i = 0
+            Req = 0
+            while i < n:
+                Rtemp = int(input(f"What is the value of resistor {i + 1}?\n"))
+                i = i + 1
+                Req = Req + 1/Rtemp
+            Req = 1/Req
+            print(f"The Total Resistance of the circuit is {Req}Ω")
+
+elif EquationType == "3":
     GeoShapes = input("Pick a Shape to solve for to solve for:\n 1. Rectangle\n 2. Triangle\n 3. Circle\n 4. Rectangular Solid\n 5. Cylinder\n 6. Sphere\n 7. Right Triangle\n")
     pi = 3.1415926535898
     if GeoShapes == "1":
