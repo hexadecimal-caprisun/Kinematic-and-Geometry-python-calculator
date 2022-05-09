@@ -20,8 +20,8 @@ if EquationType == "1":
         Vi = int(input("Ok, what is the initial Velocity?\n"))
         a = int(input("Ok, what is the acceleration?\n"))
         t = int(input("Ok, what is the time?\n"))
-        temp = ((a/2)*t)
-        ΔX = Vi*t + temp*temp
+        temp = a/2
+        ΔX = Vi*t + temp*(t*t)
         print("Ok, the displacement is " + str(ΔX) + "m")
     elif MechanicsEquations == "4":
         Vi = int(input("Ok, what is the initial Velocity?\n"))
